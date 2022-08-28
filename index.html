@@ -23,7 +23,226 @@
 </head>
 
 <body>
+    <div class="dashboard_layout">
+        <!-- Sidebar Section Start -->
+        <div class="sidebar_section">
+            <div class="sidebar__container">
+                <div class="sidebar__logo_section">
+                    <a href="/">
+                        <img class="sidebar__logo_img" src="./assets/images/carrier_lookup_logo.png"
+                            alt="carrier_lookup_logo">
+                    </a>
+                </div>
+                <ul class="sidebar__menu_section">
+                    <li>
+                        <a href="#">
+                            <span>
+                                <span class="sidebar_menu__icon">
+                                    <img src="./assets/images/icons/dashboard.svg" alt="dashboard">
+                                </span>
+                                <span class="sidebar__menu_item">Dashboard</span>
+                            </span>
+                            <span></span>
+                        </a>
+                        <div class="sidebar__menu_active_indicator"></div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>
+                                <span class="sidebar_menu__icon">
+                                    <img src="./assets/images/icons/search.svg" alt="lookup">
+                                </span>
+                                <span class="sidebar__menu_item">Lookup</span>
+                            </span>
+                            <span></span>
+                        </a>
+                        <div class="sidebar__menu_active_indicator"></div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>
+                                <span class="sidebar_menu__icon">
+                                    <img src="./assets/images/icons/files.svg" alt="files">
+                                </span>
+                                <span class="sidebar__menu_item">Files</span>
+                            </span>
+                            <span></span>
+                        </a>
+                        <div class="sidebar__menu_active_indicator"></div>
+                    </li>
+                    <li onclick="handleMenuToggle()">
+                        <a href="#">
+                            <span>
+                                <span class="sidebar_menu__icon">
+                                    <img src="./assets/images/icons/logs.svg" alt="logs">
+                                </span>
+                                <span class="sidebar__menu_item">Logs</span>
+                            </span>
+                            <span>
+                                <img src="./assets/images/icons/arrow_down.svg" alt="down-arrow-icon">
+                            </span>
+                        </a>
+                        <div class="sidebar__menu_active_indicator">
+                        </div>
+                        <ul class="sidebar__submenu" id="submenu_toggle">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <span class="sidebar_menu__icon">
+                                            <img src="./assets/images/icons/lookup.svg" alt="logs">
+                                        </span>
+                                        <span class="sidebar__menu_item">Single/Bulk Lookup</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <span class="sidebar_menu__icon">
+                                            <img src="./assets/images/icons/daily_usages.svg" alt="logs">
+                                        </span>
+                                        <span class="sidebar__menu_item">Daily Usages</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>
+                                <span class="sidebar_menu__icon">
+                                    <img src="./assets/images/icons/buy.svg" alt="buy_credit">
+                                </span>
+                                <span class="sidebar__menu_item">Buy Credits</span>
+                            </span>
+                            <span></span>
+                        </a>
+                        <div class="sidebar__menu_active_indicator"></div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>
+                                <span class="sidebar_menu__icon">
+                                    <img src="./assets/images/icons/integrations.svg" alt="integrations">
+                                </span>
+                                <span class="sidebar__menu_item">Integrations</span>
+                            </span>
+                            <span></span>
+                        </a>
+                        <div class="sidebar__menu_active_indicator"></div>
+                    </li>
+                    <li class="sidebar__menu_active">
+                        <a href="#">
+                            <span>
+                                <span class="sidebar_menu__icon">
+                                    <img src="./assets/images/icons/profile.svg" alt="profile">
+                                </span>
+                                <span class="sidebar__menu_item">My Profile</span>
+                            </span>
+                            <span></span>
+                        </a>
+                        <div class="sidebar__menu_active_indicator"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Sidebar Section End -->
 
+        <div class="right_section">
+            <!-- Navbar Section Start -->
+            <div class="navbar">
+                <div class="navbar__section">
+                    <div class="navbar__balance_section">
+                        <p>Balance: <span>$125</span></p>
+                    </div>
+                    <div class="navbar__profile-dropdown_section">
+                        <div class="navbar__profile-dropdown" onclick="handleProfileClick()">
+                            <img src="./assets/images/profile_photo.png" alt="profile image">
+                            <p>Alexa Jui</p>
+                            <img class="navbar__profile_arrow" src="./assets/images/icons/arrow_down.svg"
+                                alt="down arrow">
+                        </div>
+                        <ul class="navbar__profile_dropdown-section" id="nav-profile__dropdown">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Add Fund</a></li>
+                            <li><a href="#">API Documentation</a></li>
+                            <li><a href="#">Log Out</a></li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img class="navbar__logout_icon" src="./assets/images/icons/log-out.svg"
+                                            alt="logout">
+                                    </span>
+                                    <span>Log Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Navbar Section End -->
+
+            <!-- Body Section Start -->
+            <div class="body__section">
+                <!-- Body Top Section Start -->
+                <div class="body__top-section">
+                    <!-- Body Top Profile Section Start -->
+                    <div class="body__profile_card">
+                        <img src="./assets/images/profile_photo_100x100.png" alt="profile_image">
+                        <p class="body__profile_name">Alexa Jui</p>
+                        <p class="body__profile_info">alexajui@gmail.com</p>
+                        <p class="body__profile_info">+1 354 785 4125</p>
+                        <p class="body__profile_info">3213 D Street, Columbus, USA</p>
+                    </div>
+                    <!-- Body Top Profile Section End -->
+
+                    <!-- Body Top Credit Card Section Start -->
+                    <div class="body__credit-card_card-section">
+                        <p class="body__credit-card_title">Your Credit Cards</p>
+                        <ul class="body__credit-card_section">
+                            <li class="body__credit-card_card">
+                                <p class="body__credit-card_card-name">Credit Card 1
+                                    <span>(Default)</span>
+                                </p>
+                                <p class="body__credit-card_card-no">xxxxxxxxxxxx4684</p>
+                                <div class="body__credit-card_icon-section">
+                                    <img src="./assets/images/icons/delete.svg" alt="delete">
+                                </div>
+                            </li>
+                            <li class="body__credit-card_card body__credit-card_active">
+                                <p class="body__credit-card_card-name">Credit Card 2
+                                    <span>(Default)</span>
+                                </p>
+                                <p class="body__credit-card_card-no">xxxxxxxxxxxx4242</p>
+                                <div class="body__credit-card_icon-section">
+                                    <img src="./assets/images/icons/delete.svg" alt="delete">
+                                </div>
+                            </li>
+                            <li class="body__credit-card_card">
+                                <p class="body__credit-card_card-name">Credit Card 3
+                                    <span>(Default)</span>
+                                </p>
+                                <p class="body__credit-card_card-no">xxxxxxxxxxxx1254</p>
+                                <div class="body__credit-card_icon-section">
+                                    <img src="./assets/images/icons/delete.svg" alt="delete">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Body Top Credit Card Section End -->
+                </div>
+                <!-- Body Top Section End -->
+
+                <!-- Body Bottom Section STart -->
+                <div class="body__bottom-section"></div>
+                <!-- Body Bottom Section End -->
+            </div>
+            <!-- Body Section End -->
+        </div>
+
+    </div>
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

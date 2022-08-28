@@ -1,0 +1,365 @@
+/* -------------------------------------------
+*Table of Content 
+1.0 General CSS Start
+2.0 Common CSS Start
+3.0 Sidebar Section CSS Start
+4.0 Navbar Section CSS Start
+5.0 Body Section CSS Start
+  5.1 Body Top Section CSS Start
+  5.2 Body Bottom Section CSS Start
+------------------------------------------- */
+
+/* 1.0 General CSS Start */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.dashboard_layout {
+  display: flex;
+}
+.right_section {
+  width: calc(100% - 224px);
+}
+/* 1.0 General CSS End */
+
+/* 2.0 Common CSS Start */
+* {
+  font-family: "Poppins", sans-serif;
+}
+/* 2.0 Common CSS End */
+
+/* 3.0 Sidebar Section CSS Start */
+.sidebar_section {
+  width: 224px;
+  position: relative;
+}
+.sidebar__container {
+  background-color: #000000;
+  position: fixed;
+  height: 100%;
+  width: inherit;
+  max-width: inherit;
+  padding: 11px;
+}
+.sidebar__logo_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48.79px;
+}
+.sidebar__menu_section {
+  padding: 0 18px 0 32.01px;
+}
+.sidebar__menu_section li {
+  position: relative;
+  margin-bottom: 30px;
+}
+.sidebar__menu_section li a {
+  color: #7d7d7e;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.sidebar_menu__icon {
+  transition: all ease-in-out 0.2s;
+  margin-right: 20px;
+}
+.sidebar__menu_item {
+  font-size: 14px;
+  transition: all ease-in-out 0.2s;
+}
+.sidebar__menu_active_indicator {
+  height: 29px;
+  width: 3px;
+  background-color: #ff7901;
+  position: absolute;
+  right: -29px;
+  top: -1px;
+  display: none;
+}
+.sidebar__menu_section li a:hover .sidebar_menu__icon {
+  filter: invert(58%) sepia(58%) saturate(4674%) hue-rotate(0deg)
+    brightness(103%) contrast(104%);
+}
+.sidebar__menu_section li a:hover .sidebar__menu_item {
+  color: #fff;
+}
+.sidebar__menu_section li a:hover ~ .sidebar__menu_active_indicator {
+  display: block;
+}
+.sidebar__menu_section .sidebar__menu_active a .sidebar_menu__icon {
+  filter: invert(58%) sepia(58%) saturate(4674%) hue-rotate(0deg)
+    brightness(103%) contrast(104%);
+}
+.sidebar__menu_active a .sidebar__menu_item {
+  color: #fff;
+}
+.sidebar__menu_active .sidebar__menu_active_indicator {
+  display: block;
+}
+#submenu_toggle {
+  display: none;
+}
+.sidebar__submenu li {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.sidebar__submenu li a .sidebar_menu__icon {
+  margin-left: 10px;
+  margin-right: 7px;
+}
+.sidebar__submenu li a .sidebar__menu_item {
+  font-size: 12px;
+}
+/* 3.0 Sidebar Section CSS End */
+
+/* 4.0 Navbar Section CSS Start */
+.navbar {
+  height: 90px;
+  width: calc(100% - 224px);
+  position: relative;
+}
+.navbar__section {
+  background-color: #000;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: fixed;
+  width: inherit;
+  max-width: inherit;
+  z-index: 999;
+}
+.navbar__balance_section {
+  margin-right: 30px;
+}
+.navbar__balance_section p {
+  font-weight: 300;
+  font-size: 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.navbar__balance_section p span {
+  color: #ff7901;
+  font-weight: 500;
+  font-size: 30px;
+  margin-left: 10px;
+}
+.navbar__profile-dropdown_section {
+  position: relative;
+}
+.navbar__profile-dropdown {
+  background-color: #fff;
+  height: 60px;
+  width: 200px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 45px;
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.navbar__profile-dropdown p {
+  font-weight: 500;
+  font-size: 20px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.navbar__profile_arrow {
+  height: 6px;
+  width: 12px;
+}
+.navbar__profile_dropdown-section {
+  position: absolute;
+  height: 295px;
+  width: 200px;
+  border: 1px solid #f2f2f4;
+  box-shadow: 0px 30px 20px -20px rgba(198, 211, 232, 0.2);
+  border-radius: 10px;
+  background: #fff;
+  top: 21px;
+  left: 0;
+  padding: 59px 20px 20px 20px;
+  display: none;
+}
+.navbar__profile_dropdown-section li {
+  margin-bottom: 15px;
+}
+.navbar__profile_dropdown-section li a {
+  font-weight: 500;
+  font-size: 14px;
+  color: #7d7d7e;
+}
+.navbar__profile_dropdown-section li:last-child {
+  width: 160px;
+  height: 48px;
+  margin-top: 20px;
+  background: rgba(255, 1, 1, 0.1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 14.25px 33px;
+}
+.navbar__logout_icon {
+  margin-right: 9.25px;
+}
+.navbar__profile_dropdown-section li:last-child a {
+  color: #ff5e5e;
+  font-weight: 500;
+  font-size: 16px;
+}
+/* 4.0 Navbar Section CSS End */
+
+/* 5.0 Body Section CSS Start */
+.body__section {
+  background: #fcfbff;
+  min-height: calc(100vh - 90px);
+  width: 100%;
+  padding: 30px;
+}
+/* 5.1 Body Top Section CSS Start */
+.body__top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.body__profile_card {
+  margin-right: 30px;
+  background: #ffffff;
+  border: 1px solid #f2f2f4;
+  border-radius: 10px;
+  padding: 40px;
+  width: 325px;
+  height: 334px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body__profile_name {
+  font-weight: 500;
+  font-size: 20px;
+  color: #26262e;
+  line-height: 38px;
+  margin-top: 10px;
+}
+.body__profile_info {
+  color: #7d7d7e;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.body__credit-card_card-section {
+  background: #ffffff;
+  border: 1px solid #f2f2f4;
+  border-radius: 10px;
+  padding: 70px 30px;
+  width: 100%;
+}
+.body__credit-card_title {
+  color: #26262e;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.body__credit-card_section {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+.body__credit-card_card {
+  background: #ffffff;
+  border: 1px solid #f2f2f4;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  padding: 30px;
+  position: relative;
+}
+.body__credit-card_card-name {
+  margin-bottom: 30px;
+  color: #7d7d7e;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  transition: all ease-in-out 0.2s;
+}
+.body__credit-card_card-no {
+  color: #bdbdbd;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  transition: all ease-in-out 0.2s;
+}
+.body__credit-card_icon-section {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background: #f2f2f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  right: 10px;
+  transition: all ease-in-out 0.2s;
+}
+.body__credit-card_card .body__credit-card_card-name span {
+  display: none;
+}
+.body__credit-card_card:hover .body__credit-card_card-name,
+.body__credit-card_card:hover .body__credit-card_card-no {
+  color: #26262e;
+}
+.body__credit-card_card:hover .body__credit-card_icon-section {
+  background: #ffd7d7;
+}
+.body__credit-card_card:hover .body__credit-card_icon-section img {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(84%) saturate(2735%)
+    hue-rotate(335deg) brightness(97%) contrast(110%);
+}
+.body__credit-card_active .body__credit-card_card-name,
+.body__credit-card_active .body__credit-card_card-no {
+  color: #26262e;
+}
+.body__credit-card_active .body__credit-card_icon-section {
+  background: #ffd7d7;
+}
+.body__credit-card_active .body__credit-card_icon-section img {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(84%) saturate(2735%)
+    hue-rotate(335deg) brightness(97%) contrast(110%);
+}
+.body__credit-card_active .body__credit-card_card-name span {
+  display: block;
+}
+/* 5.1 Body Top Section CSS End */
+
+/* 5.2 Body Bottom Section CSS Start */
+/* 5.2 Body Bottom Section CSS End */
+
+/* 5.0 Body Section CSS End */
