@@ -335,6 +335,7 @@ img {
 .body__credit-card_card:hover .body__credit-card_card-name,
 .body__credit-card_card:hover .body__credit-card_card-no {
   color: #26262e;
+  display: flex;
 }
 .body__credit-card_card:hover .body__credit-card_icon-section {
   background: #ffd7d7;
@@ -346,6 +347,7 @@ img {
 .body__credit-card_active .body__credit-card_card-name,
 .body__credit-card_active .body__credit-card_card-no {
   color: #26262e;
+  display: flex;
 }
 .body__credit-card_active .body__credit-card_icon-section {
   background: #ffd7d7;
