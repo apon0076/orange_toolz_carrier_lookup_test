@@ -1,7 +1,7 @@
 // Sidebar Menu Active JS Start
 let sidebar_element = document
   .querySelector(".sidebar__container")
-  .querySelectorAll("li");
+  .querySelectorAll(".sidebar__menu_list");
 sidebar_element.forEach((element) => {
   element.addEventListener("click", function () {
     sidebar_element.forEach((sidebar) =>
@@ -12,14 +12,48 @@ sidebar_element.forEach((element) => {
 });
 // Sidebar Menu Active JS End
 
-// Sidebar Menu Dropdown Start
+// Sidebar Submenu Toggle Start
+function handleMenuToggle() {
+  var submenu_toggle_element = document.getElementById("submenu_toggle");
+  submenu_toggle_element.style.display === "block"
+    ? (submenu_toggle_element.style.display = "none")
+    : (submenu_toggle_element.style.display = "block");
+  var submenu_submenu_section_element = document.getElementById(
+    "sidebar__menu_submenu-section"
+  );
+  console.log(submenu_submenu_section_element);
+  submenu_toggle_element.style.display === "block"
+    ? submenu_submenu_section_element.classList.add(
+        "sidebar__submenu_arrow-active"
+      )
+    : submenu_submenu_section_element.classList.remove(
+        "sidebar__submenu_arrow-active"
+      );
+}
+// Sidebar Submenu Toggle End
+
+// Sidebar Submenu Item Active Js Start
+let sidebar_submenu_element = document
+  .querySelector(".sidebar__submenu")
+  .querySelectorAll("li");
+sidebar_submenu_element.forEach((element) => {
+  element.addEventListener("click", function () {
+    sidebar_submenu_element.forEach((sidebar) =>
+      sidebar.classList.remove("sidebar__submenu_items-active")
+    );
+    this.classList.add("sidebar__submenu_items-active");
+  });
+});
+// Sidebar Submenu Item Active Js End
+
+// Navbar Menu Dropdown Start
 function handleProfileClick() {
   var dropdown_element = document.getElementById("nav-profile__dropdown");
   dropdown_element.style.display === "block"
     ? (dropdown_element.style.display = "none")
     : (dropdown_element.style.display = "block");
 }
-// Sidebar Menu Dropdown End
+// Navbar Menu Dropdown End
 
 // Active Credit Card JS Start
 let credit_card_element = document
@@ -35,6 +69,33 @@ credit_card_element.forEach((element) => {
 });
 // Active Credit Card JS End
 
-// function handleMenuToggle() {
-//   document.getElementById("submenu_toggle");
+// Profile Header Button JS Start
+let profile_header = document
+  .querySelector(".profile-info__header")
+  .querySelectorAll("li");
+profile_header.forEach((element) => {
+  element.addEventListener("click", function () {
+    profile_header.forEach((profile) =>
+      profile.classList.remove("profile-info__header_btn-active")
+    );
+    this.classList.add("profile-info__header_btn-active");
+  });
+});
+// Profile Header Button JS End
+
+// Handle Notify Switch Js Start
+// function handleNotifySwitch(type) {
+//   console.log(document.getElementsByClassName("profile-info__notify_input"));
 // }
+let notify_element = document
+  .querySelector(".profile-info__notify_section")
+  .querySelectorAll("li");
+notify_element.forEach((element) => {
+  element.addEventListener("click", function () {
+    notify_element.forEach((notify) =>
+      notify.classList.remove("profile-info__notify_active")
+    );
+    this.classList.add("profile-info__notify_active");
+  });
+});
+// Handle Notify Switch Js End

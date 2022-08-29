@@ -34,7 +34,7 @@
                     </a>
                 </div>
                 <ul class="sidebar__menu_section">
-                    <li>
+                    <li class="sidebar__menu_list">
                         <a href="#">
                             <span>
                                 <span class="sidebar_menu__icon">
@@ -46,7 +46,7 @@
                         </a>
                         <div class="sidebar__menu_active_indicator"></div>
                     </li>
-                    <li>
+                    <li class="sidebar__menu_list">
                         <a href="#">
                             <span>
                                 <span class="sidebar_menu__icon">
@@ -58,7 +58,7 @@
                         </a>
                         <div class="sidebar__menu_active_indicator"></div>
                     </li>
-                    <li>
+                    <li class="sidebar__menu_list">
                         <a href="#">
                             <span>
                                 <span class="sidebar_menu__icon">
@@ -70,7 +70,7 @@
                         </a>
                         <div class="sidebar__menu_active_indicator"></div>
                     </li>
-                    <li onclick="handleMenuToggle()">
+                    <li id="sidebar__menu_submenu-section" class="sidebar__menu_list" onclick="handleMenuToggle()">
                         <a href="#">
                             <span>
                                 <span class="sidebar_menu__icon">
@@ -78,36 +78,38 @@
                                 </span>
                                 <span class="sidebar__menu_item">Logs</span>
                             </span>
-                            <span>
+                            <span class="sidebar__menu_arrow_icon">
                                 <img src="./assets/images/icons/arrow_down.svg" alt="down-arrow-icon">
                             </span>
                         </a>
                         <div class="sidebar__menu_active_indicator">
                         </div>
-                        <ul class="sidebar__submenu" id="submenu_toggle">
-                            <li>
-                                <a href="#">
-                                    <span>
-                                        <span class="sidebar_menu__icon">
-                                            <img src="./assets/images/icons/lookup.svg" alt="logs">
-                                        </span>
-                                        <span class="sidebar__menu_item">Single/Bulk Lookup</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>
-                                        <span class="sidebar_menu__icon">
-                                            <img src="./assets/images/icons/daily_usages.svg" alt="logs">
-                                        </span>
-                                        <span class="sidebar__menu_item">Daily Usages</span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-                    <li>
+                    <!-- Sidebar Submenu Toggle Section Start -->
+                    <ul class="sidebar__submenu" id="submenu_toggle">
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <span class="sidebar__submenu_menu__icon">
+                                        <img src="./assets/images/icons/lookup.svg" alt="logs">
+                                    </span>
+                                    <span class="sidebar__submenu__menu_item">Single/Bulk Lookup</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <span class="sidebar__submenu_menu__icon">
+                                        <img src="./assets/images/icons/daily_usages.svg" alt="logs">
+                                    </span>
+                                    <span class="sidebar__submenu__menu_item">Daily Usages</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Sidebar Submenu Toggle Section End -->
+                    <li class="sidebar__menu_list">
                         <a href="#">
                             <span>
                                 <span class="sidebar_menu__icon">
@@ -119,7 +121,7 @@
                         </a>
                         <div class="sidebar__menu_active_indicator"></div>
                     </li>
-                    <li>
+                    <li class="sidebar__menu_list">
                         <a href="#">
                             <span>
                                 <span class="sidebar_menu__icon">
@@ -131,7 +133,7 @@
                         </a>
                         <div class="sidebar__menu_active_indicator"></div>
                     </li>
-                    <li class="sidebar__menu_active">
+                    <li class="sidebar__menu_active sidebar__menu_list">
                         <a href="#">
                             <span>
                                 <span class="sidebar_menu__icon">
@@ -233,8 +235,58 @@
                 </div>
                 <!-- Body Top Section End -->
 
-                <!-- Body Bottom Section STart -->
-                <div class="body__bottom-section"></div>
+                <!-- Body Bottom Section Start -->
+                <div class="profile-info__section">
+                    <ul class="profile-info__header">
+                        <li>
+                            <a href="#">Update Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">Change Password</a>
+                        </li>
+                        <li class="profile-info__header_btn-active">
+                            <a href="#">Email Notifications</a>
+                        </li>
+                        <li>
+                            <a href="#">Auto Recharge Settings</a>
+                        </li>
+                    </ul>
+                    <!-- Body Bottom Profile Email Section Start -->
+                    <div class="profile-info__email_section">
+                        <ul class="profile-info__notify_section">
+                            <li>
+                                <span class="profile-info__notify_switch-section">
+                                    <label onclick="handleNotifySwitch(1)" class="profile-info__notify_switch">
+                                        <input class="profile-info__notify_input" type="checkbox" checked>
+                                        <span class="profile-info__notify_slider profile-info__notify_round"></span>
+                                    </label>
+                                </span>
+                                <span class="profile-info__notify_text">Notify me when list verification
+                                    completes</span>
+                            </li>
+                            <li>
+                                <span class="profile-info__notify_switch-section">
+                                    <label onclick="handleNotifySwitch(2)" class="profile-info__notify_switch">
+                                        <input class="profile-info__notify_input" type="checkbox" checked>
+                                        <span class="profile-info__notify_slider profile-info__notify_round"></span>
+                                    </label>
+                                </span>
+                                <span class="profile-info__notify_text">Notify me when list export completes</span>
+                            </li>
+                            <li>
+                                <span class="profile-info__notify_switch-section">
+                                    <label onclick="handleNotifySwitch(3)" class="profile-info__notify_switch">
+                                        <input class="profile-info__notify_input" type="checkbox" checked>
+                                        <span class="profile-info__notify_slider profile-info__notify_round"></span>
+                                    </label>
+                                </span>
+                                <span class="profile-info__notify_text">Notify me when list verification result is about
+                                    to expire</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Body Bottom Profile Email Section End -->
+                </div>
                 <!-- Body Bottom Section End -->
             </div>
             <!-- Body Section End -->

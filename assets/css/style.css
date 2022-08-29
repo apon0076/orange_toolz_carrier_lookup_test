@@ -7,6 +7,7 @@
 5.0 Body Section CSS Start
   5.1 Body Top Section CSS Start
   5.2 Body Bottom Section CSS Start
+  5.2.1 Body Bottom Email Section CSS Start
 ------------------------------------------- */
 
 /* 1.0 General CSS Start */
@@ -111,22 +112,48 @@ img {
 .sidebar__menu_active a .sidebar__menu_item {
   color: #fff;
 }
+.sidebar__menu_arrow_icon img {
+  transition: all ease-in-out 0.2s;
+}
+.sidebar__submenu_arrow-active a .sidebar__menu_arrow_icon img {
+  filter: invert(58%) sepia(58%) saturate(4674%) hue-rotate(0deg)
+    brightness(103%) contrast(104%);
+  transform: rotate(180deg);
+}
 .sidebar__menu_active .sidebar__menu_active_indicator {
   display: block;
 }
-#submenu_toggle {
+.sidebar__submenu {
   display: none;
+  margin: -10px 0 42px 10px;
 }
 .sidebar__submenu li {
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin: 0 0 20px 0;
 }
-.sidebar__submenu li a .sidebar_menu__icon {
-  margin-left: 10px;
+.sidebar__submenu_menu__icon {
   margin-right: 7px;
+  transition: all ease-in-out 0.2s;
 }
-.sidebar__submenu li a .sidebar__menu_item {
+.sidebar__submenu__menu_item {
+  color: #7d7d7e;
+  font-weight: 500;
   font-size: 12px;
+  line-height: 30px;
+  transition: all ease-in-out 0.2s;
+}
+.sidebar__submenu li:hover .sidebar__submenu__menu_item {
+  color: #fff;
+}
+.sidebar__submenu li:hover .sidebar__submenu_menu__icon img {
+  filter: invert(58%) sepia(58%) saturate(4674%) hue-rotate(0deg)
+    brightness(103%) contrast(104%);
+}
+.sidebar__submenu_items-active .sidebar__submenu__menu_item {
+  color: #fff;
+}
+.sidebar__submenu_items-active .sidebar__submenu_menu__icon img {
+  filter: invert(58%) sepia(58%) saturate(4674%) hue-rotate(0deg)
+    brightness(103%) contrast(104%);
 }
 /* 3.0 Sidebar Section CSS End */
 
@@ -362,6 +389,125 @@ img {
 /* 5.1 Body Top Section CSS End */
 
 /* 5.2 Body Bottom Section CSS Start */
+.profile-info__section {
+  background: #ffffff;
+  border: 1px solid #f2f2f4;
+  border-radius: 10px;
+}
+.profile-info__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #f2f2f4;
+}
+.profile-info__header li {
+  padding: 40px 0 10px 0;
+  padding-right: 16px;
+  padding-left: 16px;
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
+}
+.profile-info__header li a {
+  color: #26262e;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  transition: all ease-in-out 0.2s;
+}
+.profile-info__header li:hover a {
+  color: #ff7901;
+}
+
+.profile-info__header_btn-active a {
+  color: #ff7901 !important;
+}
+.profile-info__header_btn-active {
+  border-bottom: 2px solid #ff7901 !important;
+}
+
+/* 5.2.1 Body Bottom Email Section CSS Start */
+.profile-info__email_section {
+  padding: 54px 19.45% 50px 19.45%;
+}
+.profile-info__notify_section li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 31px;
+}
+.profile-info__notify_switch-section {
+  margin-right: 20px;
+}
+.profile-info__notify_switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+}
+.profile-info__notify_switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.profile-info__notify_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border: 1px solid #ff7901;
+}
+.profile-info__notify_slider:after {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 4px;
+  background-color: #ff7901;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 100%;
+}
+.profile-info__notify_slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .profile-info__notify_slider {
+  background-color: #ff7901;
+}
+input:focus + .profile-info__notify_slider {
+  box-shadow: 0 0 1px #ff7901;
+}
+input:checked + .profile-info__notify_slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.profile-info__notify_slider.profile-info__notify_round {
+  border-radius: 34px;
+}
+.profile-info__notify_slider.profile-info__notify_round:before {
+  border-radius: 50%;
+}
+.profile-info__notify_text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #7d7d7e;
+}
+/* 5.2.1 Body Bottom Email Section CSS End */
+
 /* 5.2 Body Bottom Section CSS End */
 
 /* 5.0 Body Section CSS End */
