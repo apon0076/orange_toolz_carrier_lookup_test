@@ -214,4 +214,28 @@
   .low-credit__input_section {
     margin: 20px 0 0 30px;
   }
+  .navbar__profile_dropdown-section {
+    width: 147px;
+    top: 12px;
+  }
+  .navbar__profile_dropdown-section {
+    padding: 47px 10px 10px 10px;
+  }
+  .navbar__profile_dropdown-section li a {
+    font-size: 12px;
+  }
+  .navbar__profile_dropdown-section li:last-child {
+    width: 125px;
+    height: 42px;
+  }
+  .navbar__profile_dropdown-section li:last-child a {
+    font-size: 14px;
+  }
+  .navbar__logout_icon {
+    margin-right: 5px;
+    height: 14px;
+  }
+  .navbar__profile_dropdown-section li:last-child {
+    padding: 14.25px 24px;
+  }
 }
