@@ -84,18 +84,24 @@ profile_header.forEach((element) => {
 // Profile Header Button JS End
 
 // Handle Notify Switch Js Start
-// function handleNotifySwitch(type) {
-//   console.log(document.getElementsByClassName("profile-info__notify_input"));
+function handleNotifySwitch() {
+  let notify_element = document.getElementsByClassName(
+    "profile-info__notify_input"
+  );
+  for (var i = 0; i < notify_element.length; i++) {
+    // if (notify_element[i].checked === true) {
+    //   notify_element[i].classList.add("notify__element_active");
+    // } else {
+    //   notify_element[i].classList.remove("notify__element_active");
+    // }
+    console.log('notify_element[i]', notify_element[i]);
+  }
+}
+
+// function handleNotifySwitch() {
+//   let notify_element = document.getElementsByClassName(
+//     "profile-info__notify_section"
+//   );
+//   console.log(notify_element);
 // }
-let notify_element = document
-  .querySelector(".profile-info__notify_section")
-  .querySelectorAll("li");
-notify_element.forEach((element) => {
-  element.addEventListener("click", function () {
-    notify_element.forEach((notify) =>
-      notify.classList.remove("profile-info__notify_active")
-    );
-    this.classList.add("profile-info__notify_active");
-  });
-});
 // Handle Notify Switch Js End

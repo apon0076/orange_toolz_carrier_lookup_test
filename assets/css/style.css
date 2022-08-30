@@ -500,6 +500,9 @@ input:checked + .profile-info__notify_slider:before {
 .profile-info__notify_slider.profile-info__notify_round:before {
   border-radius: 50%;
 }
+.notify__element_active span {
+  color: #000000;
+}
 .profile-info__notify_text {
   font-weight: 500;
   font-size: 16px;
