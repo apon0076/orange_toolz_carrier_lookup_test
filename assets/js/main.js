@@ -21,7 +21,6 @@ function handleMenuToggle() {
   var submenu_submenu_section_element = document.getElementById(
     "sidebar__menu_submenu-section"
   );
-  console.log(submenu_submenu_section_element);
   submenu_toggle_element.style.display === "block"
     ? submenu_submenu_section_element.classList.add(
         "sidebar__submenu_arrow-active"
