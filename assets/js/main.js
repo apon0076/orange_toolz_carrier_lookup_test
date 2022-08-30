@@ -88,20 +88,24 @@ function handleNotifySwitch() {
   let notify_element = document.getElementsByClassName(
     "profile-info__notify_input"
   );
+  let notify_msg_element = document.getElementsByClassName(
+    "profile-info__notify_text"
+  );
   for (var i = 0; i < notify_element.length; i++) {
-    // if (notify_element[i].checked === true) {
-    //   notify_element[i].classList.add("notify__element_active");
-    // } else {
-    //   notify_element[i].classList.remove("notify__element_active");
-    // }
-    console.log('notify_element[i]', notify_element[i]);
+    if (notify_element[i].checked === true) {
+      notify_msg_element[i].classList.add("notify__element_active");
+    } else {
+      notify_msg_element[i].classList.remove("notify__element_active");
+    }
   }
 }
-
-// function handleNotifySwitch() {
-//   let notify_element = document.getElementsByClassName(
-//     "profile-info__notify_section"
-//   );
-//   console.log(notify_element);
-// }
 // Handle Notify Switch Js End
+
+// Handle Menu Toggle Js Start
+function handleNavMenuToggle() {
+  var sidebar_toggle_element = document.querySelector(".sidebar_section");
+  sidebar_toggle_element.style.display === "block"
+    ? (sidebar_toggle_element.style.display = "none")
+    : (sidebar_toggle_element.style.display = "block");
+}
+// Handle Menu Toggle Js End

@@ -154,31 +154,41 @@
             <!-- Navbar Section Start -->
             <div class="navbar">
                 <div class="navbar__section">
-                    <div class="navbar__balance_section">
-                        <p>Balance: <span>$125</span></p>
+                    <div class="navbar__logo_section">
+                        <a href="/">
+                            <img class="nvavbar__logo_img" src="./assets/images/carrier_lookup_logo.png"
+                                alt="carrier_lookup_logo">
+                        </a>
+                        <img onclick="handleNavMenuToggle()" class="menu__toggle_icon"
+                            src="./assets/images/icons/menu-burger.svg" alt="menu">
                     </div>
-                    <div class="navbar__profile-dropdown_section">
-                        <div class="navbar__profile-dropdown" onclick="handleProfileClick()">
-                            <img src="./assets/images/profile_photo.png" alt="profile image">
-                            <p>Alexa Jui</p>
-                            <img class="navbar__profile_arrow" src="./assets/images/icons/arrow_down.svg"
-                                alt="down arrow">
+                    <div class="navbar-profile__section">
+                        <div class="navbar__balance_section">
+                            <p>Balance: <span>$125</span></p>
                         </div>
-                        <ul class="navbar__profile_dropdown-section" id="nav-profile__dropdown">
-                            <li><a href="#">My Profile</a></li>
-                            <li><a href="#">Add Fund</a></li>
-                            <li><a href="#">API Documentation</a></li>
-                            <li><a href="#">Log Out</a></li>
-                            <li>
-                                <a href="#">
-                                    <span>
-                                        <img class="navbar__logout_icon" src="./assets/images/icons/log-out.svg"
-                                            alt="logout">
-                                    </span>
-                                    <span>Log Out</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="navbar__profile-dropdown_section">
+                            <div class="navbar__profile-dropdown" onclick="handleProfileClick()">
+                                <img src="./assets/images/profile_photo.png" alt="profile image">
+                                <p>Alexa Jui</p>
+                                <img class="navbar__profile_arrow" src="./assets/images/icons/arrow_down.svg"
+                                    alt="down arrow">
+                            </div>
+                            <ul class="navbar__profile_dropdown-section" id="nav-profile__dropdown">
+                                <li><a href="#">My Profile</a></li>
+                                <li><a href="#">Add Fund</a></li>
+                                <li><a href="#">API Documentation</a></li>
+                                <li><a href="#">Log Out</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span>
+                                            <img class="navbar__logout_icon" src="./assets/images/icons/log-out.svg"
+                                                alt="logout">
+                                        </span>
+                                        <span>Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -190,11 +200,20 @@
                 <div class="body__top-section">
                     <!-- Body Top Profile Section Start -->
                     <div class="body__profile_card">
-                        <img src="./assets/images/profile_photo_100x100.png" alt="profile_image">
-                        <p class="body__profile_name">Alexa Jui</p>
-                        <p class="body__profile_info">alexajui@gmail.com</p>
-                        <p class="body__profile_info">+1 354 785 4125</p>
-                        <p class="body__profile_info">3213 D Street, Columbus, USA</p>
+                        <div class="body__profile_image-section">
+                            <img src="./assets/images/profile_photo_100x100.png" alt="profile_image">
+                        </div>
+                        <div class="body__profile_name-email">
+                            <p class="body__profile_name">Alexa Jui</p>
+                            <p class="body__profile_info">alexajui@gmail.com</p>
+                        </div>
+                        <div class="body__profile_address-section">
+                            <p class="body__profile_info">+1 354 785 4125</p>
+                            <p class="body__profile_info">3213 D Street, Columbus, USA</p>
+                        </div>
+                        <div class="body__profile_balance">
+                            <p>Balance: <span>$125</span></p>
+                        </div>
                     </div>
                     <!-- Body Top Profile Section End -->
 
@@ -257,17 +276,18 @@
                             <li>
                                 <span class="profile-info__notify_switch-section">
                                     <label onclick="handleNotifySwitch()" class="profile-info__notify_switch">
-                                        <input class="profile-info__notify_input" type="checkbox" >
+                                        <input class="profile-info__notify_input" type="checkbox" checked>
                                         <span class="profile-info__notify_slider profile-info__notify_round"></span>
                                     </label>
                                 </span>
-                                <span class="profile-info__notify_text">Notify me when list verification
+                                <span class="profile-info__notify_text notify__element_active">Notify me when list
+                                    verification
                                     completes</span>
                             </li>
                             <li>
                                 <span class="profile-info__notify_switch-section">
                                     <label onclick="handleNotifySwitch()" class="profile-info__notify_switch">
-                                        <input class="profile-info__notify_input" type="checkbox" >
+                                        <input class="profile-info__notify_input" type="checkbox">
                                         <span class="profile-info__notify_slider profile-info__notify_round"></span>
                                     </label>
                                 </span>
@@ -280,10 +300,34 @@
                                         <span class="profile-info__notify_slider profile-info__notify_round"></span>
                                     </label>
                                 </span>
-                                <span class="profile-info__notify_text">Notify me when list verification result is about
+                                <span class="profile-info__notify_text notify__element_active">Notify me when list
+                                    verification result is about
                                     to expire</span>
                             </li>
                         </ul>
+                        <div class="low-credit-email__section">
+                            <div>
+                                <span class="profile-info__notify_switch-section">
+                                    <label onclick="handleNotifySwitch()" class="profile-info__notify_switch">
+                                        <input class="profile-info__notify_input" type="checkbox" checked>
+                                        <span class="profile-info__notify_slider profile-info__notify_round"></span>
+                                    </label>
+                                </span>
+                                <span class="profile-info__notify_text notify__element_active">Receive Low Credits
+                                    Email</span>
+                            </div>
+                            <div class="low-credit__input_section">
+                                <div class="low-credit__input">
+                                    <label for="email">Send Email to <span>*</span></label>
+                                    <input id="email" type="email" placeholder="alexajui@gmail.com">
+                                </div>
+                                <div class="low-credit__input low-credit-limt__input">
+                                    <label for="email">When credits are less than <span>*</span></label>
+                                    <input id="email" type="text" value="50">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="profile-info__save_btn">Save Changes</button>
                     </div>
                     <!-- Body Bottom Profile Email Section End -->
                 </div>

@@ -64,7 +64,15 @@ img {
   margin-bottom: 48.79px;
 }
 .sidebar__menu_section {
-  padding: 0 18px 0 32.01px;
+  padding: 20px 18px 0 32.01px;
+  overflow-y: auto;
+  height: 450px;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sidebar__menu_section::-webkit-scrollbar {
+  display: none;
 }
 .sidebar__menu_section li {
   position: relative;
@@ -163,6 +171,9 @@ img {
   width: calc(100% - 224px);
   position: relative;
 }
+.navbar__logo_section {
+  display: none;
+}
 .navbar__section {
   background-color: #000;
   padding: 15px 30px;
@@ -173,6 +184,10 @@ img {
   width: inherit;
   max-width: inherit;
   z-index: 999;
+}
+.navbar-profile__section {
+  display: flex;
+  align-items: center;
 }
 .navbar__balance_section {
   margin-right: 30px;
@@ -291,6 +306,12 @@ img {
   color: #26262e;
   line-height: 38px;
   margin-top: 10px;
+  text-align: center;
+}
+.body__profile_address-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .body__profile_info {
   color: #7d7d7e;
@@ -298,6 +319,10 @@ img {
   font-size: 12px;
   line-height: 20px;
   margin-bottom: 5px;
+  text-align: center;
+}
+.body__profile_balance {
+  display: none;
 }
 .body__credit-card_card-section {
   background: #ffffff;
@@ -429,6 +454,9 @@ img {
 .profile-info__email_section {
   padding: 54px 19.45% 50px 19.45%;
 }
+.profile-info__notify_section {
+  border-bottom: 2px solid #f2f2f4;
+}
 .profile-info__notify_section li {
   display: flex;
   align-items: center;
@@ -500,14 +528,63 @@ input:checked + .profile-info__notify_slider:before {
 .profile-info__notify_slider.profile-info__notify_round:before {
   border-radius: 50%;
 }
-.notify__element_active span {
-  color: #000000;
-}
 .profile-info__notify_text {
   font-weight: 500;
   font-size: 16px;
   line-height: 32px;
   color: #7d7d7e;
+  transition: all ease-in-out 0.2s;
+}
+.notify__element_active {
+  color: #26262e;
+}
+.low-credit-email__section {
+  border-bottom: 2px solid #f2f2f4;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.low-credit__input_section {
+  margin: 20px 0 0 70px;
+  display: flex;
+  align-items: center;
+}
+.low-credit__input {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.low-credit__input label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #7d7d7e;
+}
+.low-credit__input label span {
+  color: #ff7901;
+}
+.low-credit__input input {
+  background: #ffffff;
+  border: 1px solid #f2f2f4;
+  border-radius: 10px;
+  padding: 14px 20px;
+  width: 100%;
+  margin-right: 15px;
+  outline: none;
+}
+.low-credit-limt__input {
+  margin: 0 0 0 15px;
+}
+.profile-info__save_btn {
+  margin-top: 30px;
+  background: #ff7901;
+  box-shadow: 0px 20px 50px rgba(255, 121, 1, 0.3);
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+  padding: 10px 16px;
 }
 /* 5.2.1 Body Bottom Email Section CSS End */
 
